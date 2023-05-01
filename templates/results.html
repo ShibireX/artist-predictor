@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+        <style>
+            :root {
+                --image-url: url({{ image }});
+            }
+        </style>
+    </head>
+    <body class="results">
+        <div class="bg-image"></div>
+        <section class="container">
+            <img src="{{ image }}" safe>
+            <h1>{{ artist }}</h1>
+        </section>
+    </body>
+</html>

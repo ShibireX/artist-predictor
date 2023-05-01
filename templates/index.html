@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+        <script src="{{ url_for('static', filename='popularitySlider.js') }}"></script>
+    </head>
+    <body>
+        <form class="form" method="post">
+            <label class="language">What language culture does the artist's songs belong to?<br><br>
+                <input type="radio" id="swedish" name="language" value="swedish">
+                <label for="swedish">Swedish</label>
+
+                <input type="radio" id="korean" name="language" value="korean">
+                <label for="korean">Korean</label>
+
+                <input type="radio" id="japanese" name="language" value="japanese">
+                <label for="japanese">Japanese</label>
+
+                <input type="radio" id="uk" name="language" value="uk">
+                <label for="uk">UK</label>
+
+                <input type="radio" id="latin" name="language" value="latin">
+                <label for="latin">Latin</label>
+
+                <input type="radio" id="undefined" name="language" value="">
+                <label for="undefined">Non-specific</label>
+            </label><br>
+
+            <label class="genre">What is the artist's main genre?<br><br>
+                <input type="radio" id="pop" name="genre" value="pop">
+                <label for="pop">Pop</label>
+
+                <input type="radio" id="r&b" name="genre" value="r&b">
+                <label for="r&b">R&B</label>
+
+                <input type="radio" id="hip-hop" name="genre" value="hip hop">
+                <label for="hip-hop">Hip Hop</label>
+
+                <input type="radio" id="rock" name="genre" value="rock">
+                <label for="rock">Rock</label>
+
+                <input type="radio" id="rap" name="genre" value="rap">
+                <label for="rap">Rap</label>
+
+                <input type="radio" id="edm" name="genre" value="edm">
+                <label for="edm">EDM</label>
+
+                <input type="radio" id="k-pop" name="genre" value="k-pop">
+                <label for="k-pop">K-Pop</label>
+
+                <input type="radio" id="j-pop" name="genre" value="j-pop">
+                <label for="j-pop">J-Pop</label>
+
+                <input type="radio" id="j-rock" name="genre" value="j-rock">
+                <label for="j-rock">J-Rock</label>
+
+                <input type="radio" id="anime" name="genre" value="anime">
+                <label for="anime">Anime</label>
+            </label><br>   
+
+            <label class="popularity">How popular is the artist in terms of monthly listeners?<br><br>
+                <input type="range" min="3" max="8" step="0.001" value="3" id="popularity-range"><br><br>
+                <input type="hidden" name="popularity" id="popularity-value" value="0">
+            </label>
+            <label for="popularity-range" id="popularity-label">0</label><br><br>
+
+            <label>What is the first letter in the artist's name?</label><br><br>
+            <input type="text" name="first_letter"><br><br>
+
+            <label>How many albums has the artist released?</label><br><br>
+            <input type="text" name="album_count"><br><br>
+
+            <input type="submit" value="Submit">
+        </form>
+    </body>
+</html>
